@@ -1,0 +1,557 @@
+/* Import des polices via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
+
+/* Vos classes personnalisées pour Lato */
+.lato-thin {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* RESET & Styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loader Screen */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Background color for the loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+/* Spinner Animation */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey background */
+  border-top: 8px solid #007BFF; /* Blue color for the spinner */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* When loader is hidden */
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem; /* Bigger header padding for desktop */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Container for logo + site title */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Spacing between logo and text */
+}
+
+/* Logo image */
+.logo-img {
+  width: 70px; /* Adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Site Title */
+.site-title {
+  font-size: 2rem;   /* Bigger text for a bolder feel */
+  font-weight: 900;  /* Extra bold */
+  margin: 0;
+}
+
+/* ------------------ Navigation Base Styles ------------------ */
+nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+/* Contact Button (if used in nav) */
+.contact-btn {
+  display: inline-block;
+  color: #000;
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;  /* Spacing between letters */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ------------------ Hamburger Menu Styles ------------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ------------------ SECTION HERO ------------------ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;       /* Vertical centering */
+  justify-content: flex-start; /* Align content to left */
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+  padding: 0 1rem;
+  color: #fff;
+  margin-left: 8rem; /* Offset from left on desktop */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007BFF;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ------------------ ABOUT SECTION ------------------ */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h3 {
+  color: #007BFF;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about-text a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-img img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ------------------ PRODUCTS SECTION ------------------ */
+.products {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.products p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.product-card p {
+  margin: 0 1rem 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.product-card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ CONTACT SECTION ------------------ */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Each form field row */
+.contact-form form > div {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: 120px;
+  padding: 0.75rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.map-container {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* ------------------ RESPONSIVE MEDIA QUERIES ------------------ */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    padding: 1rem 2rem; /* Reduced header padding */
+  }
+  .logo-img {
+    width: 50px; /* Smaller logo on mobile */
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* Hamburger Menu: Show on mobile */
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 1rem;
+    display: none;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  /* When toggled, display mobile menu */
+  .nav-links.nav-active {
+    display: flex;
+  }
+  
+  /* Hero adjustments */
+  .hero-content {
+    margin-left: 1rem;  /* Reduced left offset */
+    max-width: 90%;
+  }
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller hero title */
+  }
+  
+  /* About & Contact sections stack vertically */
+  .about, .contact {
+    flex-direction: column;
+    padding: 2rem 1rem; /* Less padding on mobile */
+  }
+  .map-container {
+    width: 100vw; /* Use full viewport width */
+    margin-left: calc(-1 * 1rem); /* Remove any horizontal padding (adjust based on your mobile padding) */
+    margin-right: calc(-1 * 1rem);
+  }
+  .map-container iframe {
+    width: auto; /* Ensure the iframe itself fills the container */
+  }
+}

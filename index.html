@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Biscuiterie Saromix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <!-- Logo Image -->
+    <img src="saromix-logo.jpeg" alt="Saromix Logo" class="logo-img">
+    <!-- Site Title -->
+    <h1 class="site-title lato-bold">Biscuiterie Saromix</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#hero" class="lato-regular">Accueil</a></li>
+      <li><a href="#about" class="lato-regular">À propos</a></li>
+      <li><a href="#products" class="lato-regular">Produits</a></li>
+      <li><a href="#contact" class="contact-btn lato-bold">Contact</a></li>
+    </ul>
+    <!-- Hamburger Icon -->
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+</header>
+
+  <!-- SECTION HERO -->
+  <section class="hero" id="hero">
+    <!-- Vidéo de fond -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="saromix-clip.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="lato-bold">Biscuiterie Saromix</h1>
+      <p class="lato-regular">Découvrez nos délicieuses gaufrettes et crêpes chocolatées</p>
+      <a href="#products" class="hero-btn lato-bold">VIEW PRODUCTS</a>
+    </div>
+  </section>
+
+  <!-- SECTION ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h3 class="lato-bold">DELICIOUS TREATS</h3>
+      <h2 class="lato-bold">Taste the tradition</h2>
+      <p class="lato-regular">
+        À Biscuiterie Saromix, nous sommes spécialisés dans la confection
+        de délicieuses gaufrettes, de crêpes au chocolat et de roulés croustillants.
+        Chaque produit est réalisé avec passion et précision, en respectant la tradition.
+      </p>
+      <p class="lato-regular">
+        Notre engagement envers la qualité garantit à chaque bouchée une expérience gustative
+        inoubliable. Rejoignez-nous dans cette aventure gourmande et découvrez votre
+        prochaine saveur préférée.
+      </p>
+      <p class="lato-bold"><a href="#contact">Contactez-nous</a> pour en savoir plus !</p>
+    </div>
+    <div class="about-img">
+      <img src="about-img.jpg"
+           alt="Roulés biscuits">
+    </div>
+  </section>
+
+  <!-- SECTION PRODUCTS -->
+  <section class="products" id="products">
+    <h2 class="lato-bold">Delicious Treats</h2>
+    <p class="lato-regular">Indulge in our sweet creations</p>
+    <div class="product-grid">
+      <!-- Card 1 -->
+      <div class="product-card">
+        <img src="IMG_0756.jpg" 
+             alt="Chocolate wafers">
+        <h3 class="lato-bold">Chocolate wafers</h3>
+        <p class="lato-regular">Satisfaites vos envies de chocolat avec nos gaufrettes savoureuses.</p>
+        <a href="#" class="lato-bold">En savoir plus</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="product-card">
+        <img src="img2.jpg"
+             alt="Coconut crepes">
+        <h3 class="lato-bold">Coconut crepes</h3>
+        <p class="lato-regular">Découvrez un goût de paradis avec nos crêpes à la noix de coco.</p>
+        <a href="#" class="lato-bold">En savoir plus</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="product-card">
+        <img src="img3.jpg"
+             alt="Wafer rolls">
+        <h3 class="lato-bold">Wafer rolls</h3>
+        <p class="lato-regular">Appréciez le croustillant de nos roulés sucrés et dorés.</p>
+        <a href="#" class="lato-bold">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- SECTION CONTACT -->
+<section class="contact" id="contact">
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2 class="lato-bold">We'd love to hear from you!</h2>
+    <form>
+      <div>
+        <label for="name" class="lato-regular">Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div>
+        <label for="email" class="lato-regular">Email</label>
+        <input type="email" id="email" name="email" placeholder="email@website.com" required>
+      </div>
+      <div>
+        <label for="phone" class="lato-regular">Phone number</label>
+        <input type="text" id="phone" name="phone" placeholder="555-555-5555">
+      </div>
+      <div>
+        <label for="message" class="lato-regular">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="lato-bold">Send</button>
+    </form>
+  </div>
+
+  <!-- Contact Info & Google Maps -->
+  <div class="contact-info">
+    <h3 class="lato-bold">Get in touch</h3>
+    <p class="lato-regular"><strong>Email:</strong> email@gmail.com</p>
+    
+    <!-- Google Maps Embed -->
+    <div class="map-container">
+      <iframe style="border:0; width: 100%; height: 350px;" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.894158965186!2d3.0892607999999995!3d36.7251031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad84c38c6f29%3A0xbd91f0b926cd5c92!2sEURL%20EFEN!5e0!3m2!1sfr!2sdz!4v1739843188855!5m2!1sfr!2sdz"
+              frameborder="0" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="lato-regular">&copy; 2025 Biscuiterie Saromix. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Select hamburger icon and nav links container
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    // Toggle the 'nav-active' class when the hamburger is clicked
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+
+    window.addEventListener('load', function() {
+      // When the page is fully loaded, add the 'hide' class to the loader
+      const loader = document.getElementById('loader');
+      loader.classList.add('hide');
+      // Optionally, you can remove it from the DOM after the transition:
+      setTimeout(() => {
+        loader.parentNode.removeChild(loader);
+      }, 600); // Adjust timing if needed (must be slightly longer than the CSS transition)
+    });
+  </script>
+
+</body>
+</html>
