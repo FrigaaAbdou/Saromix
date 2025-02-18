@@ -491,28 +491,38 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* ------------------ RESPONSIVE MEDIA QUERIES ------------------ */
 @media (max-width: 768px) {
-  /* Header adjustments */
+  /* Center header content */
   header {
-    padding: 1rem 2rem; /* Reduced header padding */
+    justify-content: center; /* Center children horizontally */
+    position: relative;      /* So we can position the hamburger absolutely */
   }
-  .logo-img {
-    width: 50px; /* Smaller logo on mobile */
+  /* Center the logo container */
+  .logo-container {
+    margin: calc(-1 * 1rem) auto;
   }
+  /* Hide the site title */
   .site-title {
-    font-size: 1.5rem;
+    display: none;
   }
+  /* Adjust logo size if needed */
+  .logo-img {
+    width: 120px; /* Adjust as desired */
+  }
+  /* Position the hamburger on the right */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: calc(-1 * 2rem);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Other existing mobile styles... */
   nav a {
     font-size: 1rem;
   }
-
-  /* Hamburger Menu: Show on mobile */
-  .hamburger {
-    display: flex;
-  }
   
-  /* Hide nav links by default on mobile */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -527,31 +537,29 @@ footer p {
   .nav-links li {
     margin: 1rem 0;
   }
-  /* When toggled, display mobile menu */
   .nav-links.nav-active {
     display: flex;
   }
   
-  /* Hero adjustments */
   .hero-content {
-    margin-left: 1rem;  /* Reduced left offset */
+    margin-left: 1rem;
     max-width: 90%;
   }
   .hero-content h1 {
-    font-size: 2rem; /* Smaller hero title */
+    font-size: 2rem;
   }
   
-  /* About & Contact sections stack vertically */
   .about, .contact {
     flex-direction: column;
-    padding: 2rem 1rem; /* Less padding on mobile */
+    padding: 2rem 1rem;
   }
+  
   .map-container {
-    width: 100vw; /* Use full viewport width */
-    margin-left: calc(-1 * 1rem); /* Remove any horizontal padding (adjust based on your mobile padding) */
+    width: 100vw;
+    margin-left: calc(-1 * 1rem);
     margin-right: calc(-1 * 1rem);
   }
   .map-container iframe {
-    width: auto; /* Ensure the iframe itself fills the container */
+    width: auto;
   }
 }
