@@ -172,7 +172,7 @@ nav {
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-btn:hover {
   color: #007BFF;
 }
 
@@ -191,7 +191,7 @@ nav {
 }
 
 .contact-btn:hover {
-  background-color: #ffffff;
+  background-color: #000;
   color: #fff;
 }
 
