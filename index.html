@@ -5,8 +5,8 @@
     <title>Biscuiterie Saromix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" href="saromix-logo.jpeg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="/Assets/saromix-logo.jpeg">
+    <link rel="icon" href="assets/saromix-logo.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="/assets/saromix-logo.jpeg">
     <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -43,9 +43,9 @@
   <!-- SECTION HERO -->
   <section class="hero" id="hero">
     <!-- Vidéo de fond -->
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="/Assets/saromix-clip.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo.
+    <video autoplay muted loop playsinline preload="metadata" poster="fallback-image.jpg" class="hero-video">
+      <source src="/assets/videos/saromix-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -73,7 +73,7 @@
       <p class="lato-bold"><a href="#contact">Contactez-nous</a> pour en savoir plus !</p>
     </div>
     <div class="about-img">
-      <img src="./Assets/about-img.jpg"
+      <img src="./assets/about-img.jpg"
            alt="Roulés biscuits">
     </div>
   </section>
@@ -85,7 +85,7 @@
     <div class="product-grid">
       <!-- Card 1 -->
       <div class="product-card">
-        <img src="/Assets/IMG_0756.jpg" 
+        <img src="/assets/IMG_0756.jpg" 
              alt="Chocolate wafers">
         <h3 class="lato-bold">Chocolate wafers</h3>
         <p class="lato-regular">Satisfaites vos envies de chocolat avec nos gaufrettes savoureuses.</p>
@@ -93,7 +93,7 @@
       </div>
       <!-- Card 2 -->
       <div class="product-card">
-        <img src="/Assets/img2.jpg"
+        <img src="/assets/img2.jpg"
              alt="Coconut crepes">
         <h3 class="lato-bold">Coconut crepes</h3>
         <p class="lato-regular">Découvrez un goût de paradis avec nos crêpes à la noix de coco.</p>
@@ -101,7 +101,7 @@
       </div>
       <!-- Card 3 -->
       <div class="product-card">
-        <img src="/Assets/img3.jpg"
+        <img src="/assets/img3.jpg"
              alt="Wafer rolls">
         <h3 class="lato-bold">Wafer rolls</h3>
         <p class="lato-regular">Appréciez le croustillant de nos roulés sucrés et dorés.</p>
@@ -177,7 +177,26 @@
         loader.parentNode.removeChild(loader);
       }, 600); // Adjust timing if needed (must be slightly longer than the CSS transition)
     });
-  </script>
+
+      // Only load the video on larger screens
+      if (window.innerWidth > 768) {
+        const video = document.createElement('video');
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'metadata';
+        video.className = 'hero-video';
+        video.poster = 'fallback-image.jpg';
+    
+        const source = document.createElement('source');
+        source.src = 'saromix-clip.mp4';
+        source.type = 'video/mp4';
+        video.appendChild(source);
+    
+        document.querySelector('.hero').prepend(video);
+      }
+    </script>
 
 </body>
 </html>
