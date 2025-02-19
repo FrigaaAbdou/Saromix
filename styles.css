@@ -590,6 +590,9 @@ footer p {
     flex-direction: column;
     padding: 2rem 1rem;
   }
+  .about-img {
+    display: none; /* Masque l'image sur les petits écrans */
+  }
   
   .map-container {
     width: 100vw;
