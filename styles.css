@@ -70,6 +70,7 @@
 }
 
 body {
+  padding-top: 80px;
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
   color: #333;
@@ -124,11 +125,12 @@ header {
   padding: 1rem 4rem; /* Bigger header padding for desktop */
   background-color: #fff;
   border-bottom: 1px solid #ccc;
-  position: sticky;
+  position: fixed; /* Change from sticky to fixed */
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
 }
-
 /* Container for logo + site title */
 .logo-container {
   display: flex;
@@ -492,10 +494,13 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 0px;
+  }
   /* Center header content */
   header {
     justify-content: center; /* Center children horizontally */
-    position: relative;      /* So we can position the hamburger absolutely */
+    position: fixed; /* Change from sticky to fixed */     
   }
   /* Center the logo container */
   .logo-container {
