@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
 
 /* Vos classes personnalisées pour Lato */
+.bleu {
+  background-color: #2568a5;
+}
 .lato-thin {
   font-family: "Lato", serif;
   font-weight: 100;
@@ -122,15 +125,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem; /* Bigger header padding for desktop */
+  padding: 1rem 4rem; 
   background-color: #fff;
   border-bottom: 1px solid #ccc;
-  position: fixed; /* Change from sticky to fixed */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
 }
+
 /* Container for logo + site title */
 .logo-container {
   display: flex;
@@ -207,7 +211,6 @@ nav {
 .hamburger .bar {
   height: 3px;
   width: 25px;
-  background-color: #333;
   margin: 4px 0;
   transition: 0.3s;
 }
@@ -493,14 +496,42 @@ footer p {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding-top: 0px;
+
+@media (min-width: 769px) {
+  /* Header sur grand écran */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Tout part de la gauche */
+    padding: 1rem 2rem; /* Ajustez selon vos besoins */
   }
+
+  /* Le conteneur du logo reste à gauche */
+  .logo-container {
+    margin-right: auto; /* Pousse le reste à droite */
+    margin-left: 0;     /* Pour être bien collé à gauche (optionnel) */
+  }
+
+  /* La navigation se place à droite */
+  .nav-links {
+    margin-left: auto; /* Pousse la nav tout à droite */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Réduire la hauteur du header */
+  header {
+    padding: 0.7rem 4rem; /* Moins d'espace vertical et horizontal */
+  }
+  
+  body {
+    padding-top: 0; /* Ajustez si nécessaire */
+  }
+  
   /* Center header content */
   header {
-    justify-content: center; /* Center children horizontally */
-    position: fixed; /* Change from sticky to fixed */     
+    justify-content: center;
+    position: fixed;
   }
   /* Center the logo container */
   .logo-container {
@@ -512,18 +543,19 @@ footer p {
   }
   /* Adjust logo size if needed */
   .logo-img {
-    width: 120px; /* Adjust as desired */
+    width: 150px; /* Ajustez selon vos besoins */
+    margin-top: 10px;
   }
   /* Position the hamburger on the right */
   .hamburger {
     display: flex;
     position: absolute;
-    right: calc(-1 * 2rem);
+    left: calc(-1 * 2rem);
     top: 50%;
     transform: translateY(-50%);
   }
   
-  /* Other existing mobile styles... */
+  /* Autres styles mobile existants… */
   nav a {
     font-size: 1rem;
   }
@@ -531,7 +563,7 @@ footer p {
   .nav-links {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 5.5rem;
     background-color: #fff;
     flex-direction: column;
     width: 200px;
