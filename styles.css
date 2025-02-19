@@ -590,6 +590,9 @@ footer p {
     flex-direction: column;
     padding: 2rem 1rem;
   }
+.about-img {
+  display: none;
+}
 
   /* Only add these styles if on mobile (or include them normally) */
 .product-grid {
