@@ -7,6 +7,7 @@
     <link rel="icon" href="assets/saromix-logo.jpeg" type="image/jpeg">
     <link rel="apple-touch-icon" href="assets/saromix-logo.jpeg">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Loader -->
@@ -72,33 +73,33 @@
     </section>
 
     <!-- SECTION PRODUCTS spécifique aux Waffles -->
-    <section class="products" id="products">
-      <h2 class="lato-bold">Nos Waffles</h2>
-      <p class="lato-regular">Laissez-vous tenter par notre gamme de waffles, conçues pour ravir vos papilles.</p>
-      <div class="product-grid">
-        <!-- Product Card 1 -->
-        <div class="product-card">
-          <img src="assets/img2.jpg" alt="Waffle Classique">
-          <h3 class="lato-bold">Waffle Classique</h3>
-          <p class="lato-regular">Un classique revisité avec une texture croustillante et un goût authentique.</p>
-          <a href="#" class="lato-bold">Plus d'infos</a>
-        </div>
-        <!-- Product Card 2 -->
-        <div class="product-card">
-          <img src="assets/img2.jpg" alt="Waffle Gourmet">
-          <h3 class="lato-bold">Waffle Gourmet</h3>
-          <p class="lato-regular">Pour les palais exigeants, une explosion de saveurs avec des ingrédients premium.</p>
-          <a href="#" class="lato-bold">Plus d'infos</a>
-        </div>
-        <!-- Product Card 3 -->
-        <div class="product-card">
-          <img src="assets/img2.jpg" alt="Waffle Spéciale">
-          <h3 class="lato-bold">Waffle Spéciale</h3>
-          <p class="lato-regular">Une création unique qui marie douceur et croustillant, à découvrir absolument.</p>
-          <a href="#" class="lato-bold">Plus d'infos</a>
-        </div>
-      </div>
-    </section>
+<section class="products" id="products">
+  <h2 class="lato-bold">Nos Waffles</h2>
+  <p class="lato-regular">Laissez-vous tenter par notre gamme de waffles, conçues pour ravir vos papilles.</p>
+  <div class="product-grid">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="assets/img2.jpg" alt="Waffle Classique">
+      <h3 class="lato-bold">Waffle Classique</h3>
+      <p class="lato-regular">Un classique revisité avec une texture croustillante et un goût authentique.</p>
+      <a href="#" class="lato-bold">Plus d'infos</a>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="assets/img2.jpg" alt="Waffle Gourmet">
+      <h3 class="lato-bold">Waffle Gourmet</h3>
+      <p class="lato-regular">Pour les palais exigeants, une explosion de saveurs avec des ingrédients premium.</p>
+      <a href="#" class="lato-bold">Plus d'infos</a>
+    </div>
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="assets/img2.jpg" alt="Waffle Spéciale">
+      <h3 class="lato-bold">Waffle Spéciale</h3>
+      <p class="lato-regular">Une création unique qui marie douceur et croustillant, à découvrir absolument.</p>
+      <a href="#" class="lato-bold">Plus d'infos</a>
+    </div>
+  </div>
+</section>
 
     <!-- SECTION CONTACT -->
 <section class="contact" id="contact">
@@ -148,46 +149,5 @@
       <br>
       <p class="lato-regular">Designed by Frigaa Abderrahmane</p>
     </footer>
-  
-    <script>
-      // Select hamburger icon and nav links container
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-    
-      // Toggle the 'nav-active' class when the hamburger is clicked
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-      });
-  
-      window.addEventListener('load', function() {
-        // When the page is fully loaded, add the 'hide' class to the loader
-        const loader = document.getElementById('loader');
-        loader.classList.add('hide');
-        // Optionally, you can remove it from the DOM after the transition:
-        setTimeout(() => {
-          loader.parentNode.removeChild(loader);
-        }, 600); // Adjust timing if needed (must be slightly longer than the CSS transition)
-      });
-  
-        // Only load the video on larger screens
-        if (window.innerWidth > 768) {
-          const video = document.createElement('video');
-          video.autoplay = true;
-          video.muted = true;
-          video.loop = true;
-          video.playsInline = true;
-          video.preload = 'metadata';
-          video.className = 'hero-video';
-          video.poster = 'fallback-image.jpg';
-      
-          const source = document.createElement('source');
-          source.src = 'saromix-clip.mp4';
-          source.type = 'video/mp4';
-          video.appendChild(source);
-      
-          document.querySelector('.hero').prepend(video);
-        }
-      </script>
-  
   </body>
   </html>

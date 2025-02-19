@@ -352,12 +352,38 @@ nav {
   color: #555;
 }
 
+/* Only add these styles if on mobile (or include them normally) */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  /* Make sure the container can scroll horizontally */
+  overflow-x: auto;
+  display: flex; /* If you want the cards to line up horizontally */
+  gap: 1rem;  /* Optional: spacing between cards */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem; /* Optional: spacing around the container */
+}
+
+.product-grid .product-card {
+  flex: 0 0 auto;  /* Prevent shrinking */
+  scroll-snap-align: start;
+  /* Optional: you can set a width for the cards */
+  width: 80%;
+  max-width: 300px;
   margin: 0 auto;
+}
+
+/* Cursor feedback for dragging */
+.draggable {
+  cursor: grab;
+}
+
+.draggable.active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar on mobile (optional) */
+.product-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .product-card {
