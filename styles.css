@@ -1,5 +1,5 @@
 /* Import des polices via Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap");
 
 /* Vos classes personnalisées pour Lato */
 .bleu {
@@ -74,7 +74,7 @@
 
 body {
   padding-top: 80px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -101,7 +101,7 @@ html {
 /* Spinner Animation */
 .spinner {
   border: 8px solid #f3f3f3; /* Light grey background */
-  border-top: 8px solid #007BFF; /* Blue color for the spinner */
+  border-top: 8px solid #007bff; /* Blue color for the spinner */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -110,8 +110,12 @@ html {
 
 /* Spinner keyframes */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* When loader is hidden */
@@ -125,7 +129,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem; 
+  padding: 1rem 4rem;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   position: fixed;
@@ -151,8 +155,8 @@ header {
 
 /* Site Title */
 .site-title {
-  font-size: 2rem;   /* Bigger text for a bolder feel */
-  font-weight: 900;  /* Extra bold */
+  font-size: 2rem; /* Bigger text for a bolder feel */
+  font-weight: 900; /* Extra bold */
   margin: 0;
 }
 
@@ -179,7 +183,7 @@ nav {
 }
 
 .nav-btn:hover {
-  color: #007BFF;
+  color: #007bff;
 }
 
 /* Contact Button (if used in nav) */
@@ -192,7 +196,7 @@ nav {
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;  /* Spacing between letters */
+  letter-spacing: 2px; /* Spacing between letters */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -222,7 +226,7 @@ nav {
   min-height: 80vh;
   overflow: hidden;
   display: flex;
-  align-items: center;       /* Vertical centering */
+  align-items: center; /* Vertical centering */
   justify-content: flex-start; /* Align content to left */
 }
 
@@ -270,7 +274,7 @@ nav {
 .hero-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -298,7 +302,7 @@ nav {
 }
 
 .about-text h3 {
-  color: #007BFF;
+  color: #007bff;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -316,7 +320,7 @@ nav {
 }
 
 .about-text a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -364,7 +368,7 @@ nav {
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
 }
@@ -393,12 +397,79 @@ nav {
 .product-card a {
   display: inline-block;
   margin-bottom: 1rem;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: 600;
 }
 
 .product-card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ PRODUCTS ABDOUT SECTION ------------------ */
+.product {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.product h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.product-grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-cards {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-cards:hover {
+  transform: translateY(-3px);
+}
+
+.product-cards img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-cards h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.product-cards p {
+  margin: 0 1rem 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.product-cards a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.product-cards a:hover {
   text-decoration: underline;
 }
 
@@ -452,7 +523,7 @@ nav {
 .contact-form button {
   width: 120px;
   padding: 0.75rem;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -496,7 +567,6 @@ footer p {
   font-size: 0.9rem;
 }
 
-
 @media (min-width: 769px) {
   /* Header sur grand écran */
   header {
@@ -509,7 +579,7 @@ footer p {
   /* Le conteneur du logo reste à gauche */
   .logo-container {
     margin-right: auto; /* Pousse le reste à droite */
-    margin-left: 0;     /* Pour être bien collé à gauche (optionnel) */
+    margin-left: 0; /* Pour être bien collé à gauche (optionnel) */
   }
 
   /* La navigation se place à droite */
@@ -541,6 +611,12 @@ footer p {
     justify-content: flex-start;
   }
 
+  .logo-img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    object-fit: contain;
+  }
+
   /* Hide the site title if you want only the logo */
   .site-title {
     display: none;
@@ -558,20 +634,85 @@ footer p {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    /* No absolute positioning needed since the header uses space-between */
+    margin-right: 0.5rem;
+    display: flex; /* Adjust as needed */
   }
 
-  /* Optionally, style the nav-links (hidden until toggled) */
   .nav-links {
-    display: none; /* Will be toggled via JavaScript */
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 0.5rem;
     background-color: #fff;
     flex-direction: column;
     width: 200px;
-    padding: 1rem;
     text-align: right;
-    list-style: none;
+    padding: 1rem;
+    display: none;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hero-content {
+    margin-left: 1rem;
+    max-width: 90%;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .about,
+  .contact {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .about-img {
+    display: none;
+  }
+
+  /* Only add these styles if on mobile (or include them normally) */
+  .product-grid {
+    /* Make sure the container can scroll horizontally */
+    overflow-x: auto;
+    display: flex; /* If you want the cards to line up horizontally */
+    gap: 1rem; /* Optional: spacing between cards */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem; /* Optional: spacing around the container */
+  }
+
+  .product-grid .product-card {
+    flex: 0 0 auto; /* Prevent shrinking */
+    scroll-snap-align: start;
+    /* Optional: you can set a width for the cards */
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Cursor feedback for dragging */
+  .draggable {
+    cursor: grab;
+  }
+
+  .draggable.active {
+    cursor: grabbing;
+  }
+
+  /* Hide scrollbar on mobile (optional) */
+  .product-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .map-container {
+    width: 100vw;
+    margin-left: calc(-1 * 1rem);
+    margin-right: calc(-1 * 1rem);
+  }
+  .map-container iframe {
+    width: auto;
   }
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Waffles – Biscuiterie Saromix</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/saromix-logo.jpeg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="assets/saromix-logo.jpeg">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/saromix-logo.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="assets/saromix-logo.jpeg" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -17,7 +17,31 @@
 
     <!-- HEADER -->
     <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="assets/saromix-logo.jpeg"
+            alt="Saromix Logo"
+            class="logo-img"
+          />
+        </a>
+        <h1 class="site-title lato-bold">Biscuiterie Saromix</h1>
+      </div>
       <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html#hero" class="lato-regular nav-btn">Accueil</a>
+          </li>
+          <li>
+            <a href="index.html#about" class="lato-regular nav-btn">À propos</a>
+          </li>
+          <li>
+            <a href="index.html#products" class="lato-regular nav-btn"
+              >Produits</a
+            >
+          </li>
+          <li><a href="#contact" class="contact-btn lato-bold">Contact</a></li>
+        </ul>
         <nav>
           <div class="hamburger">
             <div class="bar bleu"></div>
@@ -26,32 +50,18 @@
           </div>
         </nav>
       </nav>
-      <div class="logo-container">
-        <a href="index.html">
-            <img src="assets/saromix-logo.jpeg" alt="Saromix Logo" class="logo-img">
-        </a>
-          <h1 class="site-title lato-bold">Biscuiterie Saromix</h1>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html#hero" class="lato-regular nav-btn">Accueil</a></li>
-          <li><a href="index.html#about" class="lato-regular nav-btn">À propos</a></li>
-          <li><a href="index.html#products" class="lato-regular nav-btn">Produits</a></li>
-          <li><a href="#contact" class="contact-btn lato-bold">Contact</a></li>
-        </ul>        
-      </nav>
     </header>
-
-    
 
     <!-- SECTION HERO pour Waffles -->
     <section class="hero" id="hero">
       <!-- Optionnel: Utiliser une image en remplacement de la vidéo -->
-      <img src="assets/img2.jpg" alt="Waffles" class="hero-video">
+      <img src="assets/img2.jpg" alt="Waffles" class="hero-video" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 class="lato-bold">Waffles</h1>
-        <p class="lato-regular">Découvrez nos délicieuses waffles, croustillantes et gourmandes.</p>
+        <p class="lato-regular">
+          Découvrez nos délicieuses waffles, croustillantes et gourmandes.
+        </p>
       </div>
     </section>
 
@@ -61,93 +71,135 @@
         <h3 class="lato-bold">QUALITÉ & PASSION</h3>
         <h2 class="lato-bold">Les Waffles d'Exception</h2>
         <p class="lato-regular">
-          Chez Biscuiterie Saromix, nos waffles sont préparées selon des recettes traditionnelles qui allient croustillant et gourmandise. Chaque waffle est conçue pour offrir une expérience gustative inoubliable.
+          Chez Biscuiterie Saromix, nos waffles sont préparées selon des
+          recettes traditionnelles qui allient croustillant et gourmandise.
+          Chaque waffle est conçue pour offrir une expérience gustative
+          inoubliable.
         </p>
         <p class="lato-regular">
-          Découvrez l’harmonie parfaite entre authenticité et modernité dans chacune de nos créations.
+          Découvrez l’harmonie parfaite entre authenticité et modernité dans
+          chacune de nos créations.
         </p>
       </div>
       <div class="about-img">
-        <img src="assets/img4.jpg" alt="À propos des Waffles" >
+        <img src="assets/img4.jpg" alt="À propos des Waffles" />
       </div>
     </section>
 
     <!-- SECTION PRODUCTS spécifique aux Waffles -->
-<section class="products" id="products">
-  <h2 class="lato-bold">Nos Waffles</h2>
-  <p class="lato-regular">Laissez-vous tenter par notre gamme de waffles, conçues pour ravir vos papilles.</p>
-  <div class="product-grid">
-    <!-- Product Card 1 -->
-    <div class="product-card">
-      <img src="assets/img2.jpg" alt="Waffle Classique">
-      <h3 class="lato-bold">Waffle Classique</h3>
-      <p class="lato-regular">Un classique revisité avec une texture croustillante et un goût authentique.</p>
-      <a href="#" class="lato-bold">Plus d'infos</a>
-    </div>
-    <!-- Product Card 2 -->
-    <div class="product-card">
-      <img src="assets/img2.jpg" alt="Waffle Gourmet">
-      <h3 class="lato-bold">Waffle Gourmet</h3>
-      <p class="lato-regular">Pour les palais exigeants, une explosion de saveurs avec des ingrédients premium.</p>
-      <a href="#" class="lato-bold">Plus d'infos</a>
-    </div>
-    <!-- Product Card 3 -->
-    <div class="product-card">
-      <img src="assets/img2.jpg" alt="Waffle Spéciale">
-      <h3 class="lato-bold">Waffle Spéciale</h3>
-      <p class="lato-regular">Une création unique qui marie douceur et croustillant, à découvrir absolument.</p>
-      <a href="#" class="lato-bold">Plus d'infos</a>
-    </div>
-  </div>
-</section>
+    <section class="product" id="products">
+      <h2 class="lato-bold">Nos Waffles</h2>
+      <p class="lato-regular">
+        Laissez-vous tenter par notre gamme de waffles, conçues pour ravir vos
+        papilles.
+      </p>
+      <div class="product-grids">
+        <!-- Product Card 1 -->
+        <div class="product-cards">
+          <img src="assets/img2.jpg" alt="Waffle Classique" />
+          <h3 class="lato-bold">Waffle Classique</h3>
+          <p class="lato-regular">
+            Un classique revisité avec une texture croustillante et un goût
+            authentique.
+          </p>
+          <a href="#" class="lato-bold">Plus d'infos</a>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-cards">
+          <img src="assets/img2.jpg" alt="Waffle Gourmet" />
+          <h3 class="lato-bold">Waffle Gourmet</h3>
+          <p class="lato-regular">
+            Pour les palais exigeants, une explosion de saveurs avec des
+            ingrédients premium.
+          </p>
+          <a href="#" class="lato-bold">Plus d'infos</a>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-cards">
+          <img src="assets/img2.jpg" alt="Waffle Spéciale" />
+          <h3 class="lato-bold">Waffle Spéciale</h3>
+          <p class="lato-regular">
+            Une création unique qui marie douceur et croustillant, à découvrir
+            absolument.
+          </p>
+          <a href="#" class="lato-bold">Plus d'infos</a>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION CONTACT -->
-<section class="contact" id="contact">
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <h2 class="lato-bold">We'd love to hear from you!</h2>
-      <form>
-        <div>
-          <label for="name" class="lato-regular">Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-        </div>
-        <div>
-          <label for="email" class="lato-regular">Email</label>
-          <input type="email" id="email" name="email" placeholder="email@website.com" required>
-        </div>
-        <div>
-          <label for="phone" class="lato-regular">Phone number</label>
-          <input type="text" id="phone" name="phone" placeholder="555-555-5555">
-        </div>
-        <div>
-          <label for="message" class="lato-regular">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
-        </div>
-        <button type="submit" class="lato-bold">Send</button>
-      </form>
-    </div>
-  
-    <!-- Contact Info & Google Maps -->
-    <div class="contact-info">
-      <h3 class="lato-bold">Get in touch</h3>
-      <p class="lato-regular"><strong>Email:</strong> email@gmail.com</p>
-      
-      <!-- Google Maps Embed -->
-      <div class="map-container">
-        <iframe style="border:0; width: 100%; height: 350px;" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.894158965186!2d3.0892607999999995!3d36.7251031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad84c38c6f29%3A0xbd91f0b926cd5c92!2sEURL%20EFEN!5e0!3m2!1sfr!2sdz!4v1739843188855!5m2!1sfr!2sdz"
-                frameborder="0" 
-                allowfullscreen>
-        </iframe>
+    <section class="contact" id="contact">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2 class="lato-bold">We'd love to hear from you!</h2>
+        <form>
+          <div>
+            <label for="name" class="lato-regular">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jane Smith"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="lato-regular">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@website.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone" class="lato-regular">Phone number</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="555-555-5555"
+            />
+          </div>
+          <div>
+            <label for="message" class="lato-regular">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <button type="submit" class="lato-bold">Send</button>
+        </form>
       </div>
-    </div>
-  </section>
-  
+
+      <!-- Contact Info & Google Maps -->
+      <div class="contact-info">
+        <h3 class="lato-bold">Get in touch</h3>
+        <p class="lato-regular"><strong>Email:</strong> email@gmail.com</p>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+          <iframe
+            style="border: 0; width: 100%; height: 350px"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.894158965186!2d3.0892607999999995!3d36.7251031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad84c38c6f29%3A0xbd91f0b926cd5c92!2sEURL%20EFEN!5e0!3m2!1sfr!2sdz!4v1739843188855!5m2!1sfr!2sdz"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
-      <p class="lato-regular">&copy; 2025 Biscuiterie Saromix. Tous droits réservés.</p>
-      <br>
+      <p class="lato-regular">
+        &copy; 2025 Biscuiterie Saromix. Tous droits réservés.
+      </p>
+      <br />
       <p class="lato-regular">Designed by Frigaa Abderrahmane</p>
     </footer>
   </body>
-  </html>
+</html>
