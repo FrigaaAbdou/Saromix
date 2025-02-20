@@ -206,6 +206,7 @@ nav {
 }
 
 /* ------------------ Hamburger Menu Styles ------------------ */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -589,17 +590,22 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  
   header {
     display: flex;
     justify-content: space-between; /* Puts logo at left and nav/hamburger at right */
     align-items: center;
-    padding: 0.7rem 1rem; /* Adjust as needed */
+    padding: 0px; 
+    margin: 0px;
+    margin-top: calc(-1 * 0.5rem);
+    margin-bottom: calc(-1 * 0.5rem);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
     background-color: #fff; /* Ensure background for header */
+    border: 1px rgb(1, 101, 177);
   }
 
   /* Logo container remains at the left */
@@ -609,6 +615,8 @@ footer p {
     gap: 1rem;
     margin: 0;
     justify-content: flex-start;
+    padding: 0.7rem 1rem;
+    margin-bottom: calc(-1 * 0.5rem);
   }
 
   .logo-img {
@@ -627,15 +635,29 @@ footer p {
     position: relative;
     display: flex;
     align-items: center;
-  }
+    background-color:#000;
+    height: 100%;
+    z-index: 999;
 
+  }
+  .faded-bg {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(350deg, rgb(1, 101, 177) 0%, #f30019 100%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(-1 * 0.5rem);
+   }
   /* Hamburger menu positioned to the extreme right */
   .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 0.5rem;
     display: flex; /* Adjust as needed */
+    margin-bottom: calc(-1 * 1rem);
   }
 
   .nav-links {
