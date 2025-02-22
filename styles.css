@@ -651,7 +651,7 @@ footer p {
     justify-content: center;
     align-items: center;
     margin-top: calc(-1 * 0.75rem);
-    margin-bottom: calc(-1 * 7px);
+    margin-bottom: calc(-1 * 6px);
    }
   /* Hamburger menu positioned to the extreme right */
   .hamburger {
