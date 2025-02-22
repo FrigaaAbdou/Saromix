@@ -1,13 +1,38 @@
 /* Import des polices via Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* Vos classes personnalisées pour Lato */
 .bleu {
   background-color: #ffffff;
   border-radius: 22px;
 }
 
+.red {
+  color: #f30019;
+  border-radius: 22px;
+}
 
+.roboto-mono-bold {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-mono-regular {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.righteous-regular {
+  font-family: "Righteous", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Vos classes personnalisées pour Lato */
 .lato-thin {
   font-family: "Lato", serif;
   font-weight: 100;
