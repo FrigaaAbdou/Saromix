@@ -643,7 +643,7 @@ footer p {
   }
   .faded-bg {
     height: 100px;
-    width: 100px;
+    width: 80px;
     background: linear-gradient(350deg, rgb(1, 101, 177) 0%, #f30019 100%);
     padding: 0;
     margin: 0;
@@ -660,6 +660,7 @@ footer p {
     cursor: pointer;
     display: flex; /* Adjust as needed */
     margin-bottom: calc(-1 * 1rem);
+    margin-left: 4px;
     z-index: 999;
   }
 
