@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+.roboto-mono-semi-bold {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .roboto-mono-regular {
   font-family: "Roboto Mono", serif;
   font-optical-sizing: auto;
