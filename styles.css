@@ -1,6 +1,5 @@
 /* Import des polices via Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
 .bleu {
   background-color: #ffffff;
@@ -12,100 +11,25 @@
   border-radius: 22px;
 }
 
-.roboto-mono-bold {
-  font-family: "Roboto Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-mono-semi-bold {
-  font-family: "Roboto Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.roboto-mono-regular {
-  font-family: "Roboto Mono", serif;
-  font-optical-sizing: auto;
+.alatsi-regular {
+  font-family: "Alatsi", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.righteous-regular {
-  font-family: "Righteous", serif;
-  font-weight: 400;
-  font-style: normal;
+.alatsi-bold {
+  font-family: "Alatsi", serif;
 }
 
-/* Vos classes personnalisées pour Lato */
-.lato-thin {
-  font-family: "Lato", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.lato-light {
-  font-family: "Lato", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-bold {
-  font-family: "Lato", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-family: "Lato", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light-italic {
-  font-family: "Lato", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", serif;
-  font-weight: 900;
-  font-style: italic;
-}
 
 /* RESET & Styles globaux */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Alatsi", serif;
 }
+
 
 body {
   padding-top: 80px;
@@ -172,6 +96,20 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
+}
+
+.slogon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: calc(-1 * 1rem);
+}
+
+.slogon img {
+  width: 300px;
+  height: auto;
 }
 
 /* Container for logo + site title */
@@ -419,21 +357,21 @@ nav {
   object-fit: cover;
 }
 
-.product-card h3 {
+.product-card h1 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-.product-card p {
+/* .product-card p {
   margin: 0 1rem 1rem;
   color: #666;
   font-size: 0.95rem;
-}
+} */
 
 .product-card a {
   display: inline-block;
   margin-bottom: 1rem;
-  color: #007bff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -624,6 +562,15 @@ footer p {
   }
 }
 
+
+@media (max-width: 1038px) {
+  .slogon img {
+    width: 180px;
+    height: auto;
+    margin-left: calc(-1 * 1rem);
+  }
+}
+
 @media (max-width: 768px) {
   
   header {
@@ -642,6 +589,13 @@ footer p {
     background-color: #fff; /* Ensure background for header */
     border: 0px;
   }
+
+  .slogon img {
+    width: 180px;
+    height: auto;
+    margin-left: calc(-1 * 1rem);
+  }
+  
 
   /* Logo container remains at the left */
   .logo-container {
@@ -730,7 +684,6 @@ footer p {
   .about-img {
     display: none;
   }
-
   /* Only add these styles if on mobile (or include them normally) */
   .product-grid {
     /* Make sure the container can scroll horizontally */
