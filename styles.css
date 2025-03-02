@@ -12,7 +12,7 @@ p, a {
   font-weight: 500;
   font-style: normal;
 }
-label, input, button, nav {
+label, input, button, .nav-btn, .contact-btn {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -631,7 +631,7 @@ footer p {
   }
   .faded-bg {
     height: 100px;
-    width: 80px;
+    width: 85px;
     background: linear-gradient(350deg, rgb(1, 101, 177) 0%, #f30019 100%);
     padding: 0;
     margin: 0;
@@ -639,7 +639,7 @@ footer p {
     justify-content: center;
     align-items: center;
     margin-top: calc(-1 * 0.75rem);
-    margin-bottom: calc(-1 * 6px);
+    margin-bottom: calc(-1 * 10px);
    }
   /* Hamburger menu positioned to the extreme right */
   .hamburger {
